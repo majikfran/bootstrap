@@ -28,7 +28,9 @@
 .visible-xs,
 .visible-sm,
 .visible-md,
-.visible-lg {
+.visible-lg,
+.visible-xl,
+.visible-xxl {
   .responsive-invisibility();
 }
 
@@ -43,7 +45,14 @@
 .visible-md-inline-block,
 .visible-lg-block,
 .visible-lg-inline,
-.visible-lg-inline-block {
+.visible-lg-inline-block,
+.visible-xl-block,
+.visible-xl-inline,
+.visible-xl-inline-block,
+.visible-xxl-block,
+.visible-xxl-inline,
+.visible-xxl-inline-block
+ {
   display: none !important;
 }
 
@@ -111,22 +120,64 @@
 }
 
 .visible-lg {
-  @media (min-width: @screen-lg-min) {
+  @media (min-width: @screen-lg-min) and (max-width: @screen-lg-max) {
     .responsive-visibility();
   }
 }
 .visible-lg-block {
-  @media (min-width: @screen-lg-min) {
+  @media (min-width: @screen-lg-min) and (max-width: @screen-lg-max) {
     display: block !important;
   }
 }
 .visible-lg-inline {
-  @media (min-width: @screen-lg-min) {
+  @media (min-width: @screen-lg-min) and (max-width: @screen-lg-max) {
     display: inline !important;
   }
 }
 .visible-lg-inline-block {
-  @media (min-width: @screen-lg-min) {
+  @media (min-width: @screen-lg-min) and (max-width: @screen-lg-max) {
+    display: inline-block !important;
+  }
+}
+
+.visible-xl {
+  @media (min-width: @screen-xl-min) and (max-width: @screen-xl-max)  {
+    .responsive-visibility();
+  }
+}
+.visible-xl-block {
+  @media (min-width: @screen-xl-min) and (max-width: @screen-xl-max)  {
+    display: block !important;
+  }
+}
+.visible-xl-inline {
+  @media (min-width: @screen-xl-min) and (max-width: @screen-xl-max) {
+    display: inline !important;
+  }
+}
+.visible-xl-inline-block {
+  @media (min-width: @screen-xl-min) and (max-width: @screen-xl-max) {
+    display: inline-block !important;
+  }
+}
+
+.visible-xxl {
+  @media (min-width: @screen-xxl-min) {
+    .responsive-visibility();
+  }
+}
+.visible-xxl-block {
+  @media (min-width: @screen-xxl-min) {
+    display: block !important;
+  }
+}
+.visible-xxl-inline {
+  @media (min-width: @screen-xxl-min) {
+    display: inline !important;
+  }
+}
+.visible-xxl-inline-block {
+  @media (min-width: @screen-xxl-min) {
     display: inline-block !important;
   }
 }
@@ -147,11 +198,20 @@
   }
 }
 .hidden-lg {
-  @media (min-width: @screen-lg-min) {
+  @media (min-width: @screen-lg-min) and (max-width: @screen-lg-max)  {
     .responsive-invisibility();
   }
 }
-
+.hidden-xl {
+  @media (min-width: @screen-xl-min) and (max-width: @screen-xl-max) {
+    .responsive-invisibility();
+  }
+}
+.hidden-lg {
+  @media (min-width: @screen-xxl-min) {
+    .responsive-invisibility();
+  }
+}
 
 // Print utilities
 //
